@@ -90,8 +90,9 @@ export default function Navbar(props) {
             <IconButton sx={{ pb: ".5em", color: "black", pr: ".5em" }}>
               <CloseIcon onClick={toggleDrawer(false)} />
             </IconButton>
-            <Stack>
-              <h4>test</h4>
+            <Stack sx={{p:"2em"}}>
+              <h4>linkedin link</h4>
+              <h4>github link</h4>
             </Stack>
           </Box>
         </Drawer>
