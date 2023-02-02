@@ -48,6 +48,8 @@ export default function Navbar(props) {
       <Toolbar sx={{ borderBottom: "4px solid #e65c00" }}>
         <Typography
           variant="h5"
+          display="flex"
+          justifyContent="center"
           sx={{
             flexGrow: "1",
             fontWeight: 700,
@@ -91,8 +93,8 @@ export default function Navbar(props) {
               <CloseIcon onClick={toggleDrawer(false)} />
             </IconButton>
             <Stack sx={{p:"2em"}}>
-              <h4>linkedin link</h4>
-              <h4>github link</h4>
+              <h4>https://www.linkedin.com/pub/john-powers/54/35a/46</h4>
+              <h4>https://www.github.com/jwpowers2</h4>
             </Stack>
           </Box>
         </Drawer>

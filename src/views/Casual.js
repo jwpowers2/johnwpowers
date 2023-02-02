@@ -7,8 +7,14 @@ export default function Casual() {
     <>
     <Container>
         <h1>casual</h1>
-        <Ticker arr={["one","two","three","four","five","six","seven"]}/>
-        <ExperienceBox/>
+        <Ticker arr={["React.js","","Dependable","Networking","Leadership","Research and Development","Production Proven", "Fun"]}/>
+        <ExperienceBox experience={
+          [
+            {title:"Flexgen Power Systems", body:"Software Developer II September 2021 – Present,Build New Features, collaborating or solo, bugfixes, Customer interactions, varied levels of guidance ok, Unit testing (FE, BE), manual testing, storybook UI development, Find Bugs using various means to include network debugging, React.js (Material-UI), Node.js, Typescript, Go, Docker, Docker-Compose, Nest.js,Implemented security features to include password expiration and MFA, SSO POC, R&D for several months creating several POC’s, demo to large audience"},
+            {title:"The Select Group, at Cisco Systems",body:"Software Developer II, greenfield project development (front end) September 2019 – May 2022"},
+            {title:"Spottedbot",body:"Developer, Cloud Threat Intelligence web site January 2019 – August 2019"}
+          ]}
+        />
     </Container>
     </>
   )
