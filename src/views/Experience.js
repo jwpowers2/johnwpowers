@@ -1,13 +1,11 @@
 import {useState} from 'react';
-import { Container } from "@mui/material";
+import { Container,Box } from "@mui/material";
 import Ticker from "../components/Ticker";
 import ExperienceBox from '../components/ExperienceBox';
-export default function Casual() {
+export default function Experience() {
   return (
     <>
     <Container>
-        <h1>casual</h1>
-        <Ticker arr={["React.js","","Dependable","Networking","Leadership","Research and Development","Production Proven", "Fun"]}/>
         <ExperienceBox experience={
           [
             {title:"Flexgen Power Systems", body:"Software Developer II September 2021 – Present,Build New Features, collaborating or solo, bugfixes, Customer interactions, varied levels of guidance ok, Unit testing (FE, BE), manual testing, storybook UI development, Find Bugs using various means to include network debugging, React.js (Material-UI), Node.js, Typescript, Go, Docker, Docker-Compose, Nest.js,Implemented security features to include password expiration and MFA, SSO POC, R&D for several months creating several POC’s, demo to large audience"},
