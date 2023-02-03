@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import {Container,Button,Box,Stack} from "@mui/material";
+import {Container,Button,Box,Stack, Typography, Table, TableRow, TableCell} from "@mui/material";
 
 export default function ExperienceBox(props) {
     let [experience, setExperience] = useState(props.experience);
@@ -46,8 +46,28 @@ export default function ExperienceBox(props) {
             justifyContent="center"
             alignItems="center"
         >
-        {experience[count].body}
-      </Box>
+            <Typography variant="h4">{experience[count].description}</Typography>
+        </Box>
+        <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+        >
+            <Typography varient="h5">{experience[count].timeline}</Typography>
+        </Box>
+        <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+        >
+            <Typography variant="h5">
+                <Table style={{fontSize: ".75em", textAlign: "center"}}>
+                {experience[count].body.map((item) => {
+                    return <TableRow><TableCell>{item}</TableCell></TableRow>
+                })}
+                </Table>
+            </Typography>
+        </Box>
       </Container>
     )
 }

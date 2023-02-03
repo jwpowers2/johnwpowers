@@ -10,6 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -93,8 +95,8 @@ export default function Navbar(props) {
               <CloseIcon onClick={toggleDrawer(false)} />
             </IconButton>
             <Stack sx={{p:"2em"}}>
-              <h4>https://www.linkedin.com/pub/john-powers/54/35a/46</h4>
-              <h4>https://www.github.com/jwpowers2</h4>
+              <Link to="https://www.linkedin.com/pub/john-powers/54/35a/46"><LinkedInIcon fontSize="large" /></Link>
+              <Link to="https://www.github.com/jwpowers2"><GitHubIcon fontSize="large" /></Link>
             </Stack>
           </Box>
         </Drawer>

@@ -1,4 +1,4 @@
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 export default function Objective() {
     return (
@@ -7,7 +7,9 @@ export default function Objective() {
         justifyContent="center"
         alignItems="center"
     >
-        <p>Contribute my knowledge I have about programming and networking to an organization while being open to learning new skills and technologies</p>
+        <Typography>
+            Contribute my knowledge I have about programming and networking to an organization while being open to learning new skills and technologies
+        </Typography>
         </Box>
     )
 }
