@@ -6,6 +6,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Typography from "@mui/material/Typography";
 import Experience from './Experience';
 import { Link, Outlet } from 'react-router-dom';
 

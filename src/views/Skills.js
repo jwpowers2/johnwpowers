@@ -1,4 +1,5 @@
 import {Box} from "@mui/material";
+import SkillsBox from "../components/SkillsBox";
 
 export default function Skills() {
     return (
@@ -7,6 +8,7 @@ export default function Skills() {
         justifyContent="center"
         alignItems="center"
         >
+            <SkillsBox/>
         </Box>
     )
 }

@@ -14,3 +14,12 @@ code {
 .headlineBox {
   height: "1em"
 }
+.node.person text {
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}

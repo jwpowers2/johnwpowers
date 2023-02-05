@@ -61,11 +61,9 @@ export default function ExperienceBox(props) {
             alignItems="center"
         >
             <Typography variant="h5">
-                <Table style={{fontSize: ".75em", textAlign: "center"}}>
                 {experience[count].body.map((item) => {
-                    return <TableRow><TableCell>{item}</TableCell></TableRow>
+                    return <Typography mb=".5em" variant="h6">{item}</Typography>
                 })}
-                </Table>
             </Typography>
         </Box>
       </Container>
