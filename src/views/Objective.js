@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Box, Typography, Stack, Divider} from "@mui/material";
 
 export default function Objective() {
     return (
@@ -7,9 +7,23 @@ export default function Objective() {
         justifyContent="center"
         alignItems="center"
     >
-        <Typography>
-            Contribute my knowledge I have about programming and networking to an organization while being open to learning new skills and technologies
+        <Stack direction="column">
+        <Typography variant="h5" m="1em">
+            Create effective and innovative new things
         </Typography>
+        <Divider/>
+        <Typography m="1em" variant="h5">
+            Optimize old things
+        </Typography>
+        <Divider/>
+        <Typography m="1em" variant="h5">
+            Contribute to the team
+        </Typography>
+        <Divider/>
+        <Typography m="1em" variant="h5">
+            Maintain a creative and unorthodox mindset 
+        </Typography>
+        </Stack>
         </Box>
     )
 }

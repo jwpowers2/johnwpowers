@@ -48,6 +48,22 @@ export default function Experience() {
               body:[
                 "Cloud Threat Intelligence web site"
               ]
+            },
+            {
+              title:"AggData", 
+              description: "Web Scraper Manager", 
+              timeline: "J", 
+              body:[
+                "scraping"
+              ]
+            },
+            {
+              title:"Forsta.io", 
+              description: "Developer", 
+              timeline: "", 
+              body:[
+                ""
+              ]
             }
           ]}
         />

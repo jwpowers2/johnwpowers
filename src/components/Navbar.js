@@ -95,8 +95,8 @@ export default function Navbar(props) {
               <CloseIcon onClick={toggleDrawer(false)} />
             </IconButton>
             <Stack sx={{p:"2em"}}>
-              <Link to="https://www.linkedin.com/pub/john-powers/54/35a/46"><LinkedInIcon fontSize="large" /></Link>
-              <Link to="https://www.github.com/jwpowers2"><GitHubIcon fontSize="large" /></Link>
+              <Link to="https://www.linkedin.com/pub/john-powers/54/35a/46"><LinkedInIcon fontSize="large" style={{color: "black"}}/></Link>
+              <Link to="https://www.github.com/jwpowers2"><GitHubIcon fontSize="large" style={{color: "black"}}/></Link>
             </Stack>
           </Box>
         </Drawer>

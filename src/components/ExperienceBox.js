@@ -7,11 +7,11 @@ export default function ExperienceBox(props) {
     let [experience, setExperience] = useState(props.experience);
     let [count, setCount] = useState(0)
     const arrowLeft = () => {
-        const newCount = count - 1;
+        const newCount = (count > 0) ? count - 1 : count;
         setCount(newCount);
     }
     const arrowRight = () => {
-        const newCount = count + 1;
+        const newCount = (count < experience.length-1)? count + 1: count;
         setCount(newCount);
     }
     return (
@@ -32,11 +32,11 @@ export default function ExperienceBox(props) {
         >
             <Stack direction="row" style={{fontSize:"2em"}}>
                 <Button onClick={arrowLeft}>
-                    <ArrowLeftIcon style={{fontSize:"4em"}}/>
+                    <ArrowLeftIcon style={{fontSize:"4em", color: "#e65c00"}}/>
                 </Button>
                 
                 <Button onClick={arrowRight}>
-                    <ArrowRightIcon style={{fontSize:"4em"}}/>
+                    <ArrowRightIcon style={{fontSize:"4em", color: "#e65c00"}}/>
                 </Button>
             </Stack>
           

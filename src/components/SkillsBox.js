@@ -15,7 +15,7 @@ export default function SkillsBox(props) {
             {
                 "id": 1,
                 "type": "job",
-                "name": "Flexgen Power Systems"
+                "name": "Flexgen"
             },
             {
                 "id": 2,
@@ -45,12 +45,12 @@ export default function SkillsBox(props) {
             {
                 "id": 7,
                 "type": "skill",
-                "name": "Authentication"
+                "name": "Auth"
             },
             {
                 "id": 8,
                 "type": "job",
-                "name": "The Select Group at Cisco Systems"
+                "name": "Select Group"
             },
             {
                 "id": 9,
@@ -70,7 +70,7 @@ export default function SkillsBox(props) {
             {
                 "id": 12,
                 "type": "skill",
-                "name": "Regular Expressions"
+                "name": "regex"
             },
             {
                 "id": 13,
@@ -80,23 +80,51 @@ export default function SkillsBox(props) {
             {
                 "id": 14,
                 "type": "skill",
-                "name": "Data Visualization"
+                "name": "Data Viz"
             },
             {
                 "id": 15,
                 "type": "skill",
-                "name": "Material UI"
+                "name": "MUI"
+            },
+            {
+                "id": 16,
+                "type": "skill",
+                "name": "Javascript"
+            },
+            {
+                "id": 17,
+                "type": "skill",
+                "name": "R & D"
+            },
+            {
+                "id": 18,
+                "type": "skill",
+                "name": "PWA"
+            },
+            {
+                "id": 19,
+                "type": "skill",
+                "name": "MongoDB"
+            },
+            {
+                "id": 20,
+                "type": "skill",
+                "name": "Postgres"
             },
         ],
         links: [
             {source: 0, target: 1},
             {source: 1, target: 7},
+            {source: 16, target: 1},
+            {source: 16, target: 8},
             {source: 2, target: 1},
-            {source: 8, target: 3},
-            {source: 1, target: 3},
-            {source: 1, target: 4},
+            {source: 2, target: 8},
+            {source: 3, target: 8},
+            {source: 3, target: 1},
             {source: 4, target: 8},
             {source: 4, target: 10},
+            {source: 4, target: 1},
             {source: 10, target: 11},
             {source: 9, target: 12},
             {source: 10, target: 12},
@@ -105,6 +133,10 @@ export default function SkillsBox(props) {
             {source: 1, target: 5},
             {source: 14, target: 8},
             {source: 15, target: 1},
+            {source: 17, target: 9},
+            {source: 17, target: 1},
+            {source: 20, target: 1},
+            {source: 20, target: 10},
         ]
     }
     function linkArc(d) {
@@ -149,7 +181,8 @@ export default function SkillsBox(props) {
         .selectAll("path")
         .data(links)
         .join("path")
-          .attr("stroke", d => color(d.type))
+          //.attr("stroke", d => color(d.type))
+          .attr("stroke", d => "#e65c00")
           //.attr("marker-end", d => `url(${new URL(`#arrow-${d.type}`, location)})`);
           const node = svg.append("g")
           .attr("fill", "currentColor")
@@ -162,7 +195,7 @@ export default function SkillsBox(props) {
       node.append("circle")
           .attr("stroke", "white")
           .attr("stroke-width", 1.5)
-          .attr("r", 4);
+          .attr("r", (d)=> (d.type === "job")? 5 : 2);
           node.append("text")
           .attr("x", 8)
           .attr("y", "0.31em")
@@ -183,14 +216,12 @@ export default function SkillsBox(props) {
     },[])
 
     return (
-        <Container>
+    
         <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+            style={{"width":"100%"}}
         >
             <svg ref={svgRef} width="50em" height="50em"></svg>
         </Box>
-        </Container>
+        
     )
 }

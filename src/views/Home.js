@@ -27,10 +27,10 @@ export default function Home() {
             alignItems="center"
         >
           <Stack direction="row">
-              <Box sx={{p:"1em"}}><Link to="/objective">Objective</Link></Box>
-              <Box sx={{p:"1em"}}><Link to="/experience">Experience</Link></Box>
-              <Box sx={{p:"1em"}}><Link to="/skills">Skills</Link></Box>
-              <Box sx={{p:"1em"}}><Link to="/education">Education</Link></Box>
+              <Box sx={{p:"1em"}}><Link style={{color:"black", textDecoration: "none"}} to="/objective">Objective</Link></Box>
+              <Box sx={{p:"1em"}}><Link style={{color:"black", textDecoration: "none"}} to="/experience">Experience</Link></Box>
+              <Box sx={{p:"1em"}}><Link style={{color:"black", textDecoration: "none"}} to="/skills">Skills</Link></Box>
+              <Box sx={{p:"1em"}}><Link style={{color:"black", textDecoration: "none"}} to="/education">Education</Link></Box>
           </Stack>
       </Box>
             <Outlet/>
