@@ -59,10 +59,15 @@ export default function ExperienceBox(props) {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            mt={3}
         >
             <Typography variant="h5">
                 {experience[count].body.map((item) => {
-                    return <Typography mb=".5em" variant="h6">{item}</Typography>
+                    return (
+                        <Typography mb="1em" variant="h6">
+                            {item}
+                        </Typography>
+                    )
                 })}
             </Typography>
         </Box>

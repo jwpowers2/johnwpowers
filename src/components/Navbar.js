@@ -48,6 +48,7 @@ export default function Navbar(props) {
       }}
     >
       <Toolbar sx={{ borderBottom: "4px solid #e65c00" }}>
+      
         <Typography
           variant="h5"
           display="flex"
@@ -56,11 +57,20 @@ export default function Navbar(props) {
             flexGrow: "1",
             fontWeight: 700,
             paddingLeft: ".5em",
+            paddingTop: ".5em",
             color: "black",
             textDecoration: "none",
             fontFamily: "'Rajdhani', sans-serif"
           }}
         >
+          <svg id="svg" height="70" width="70">
+            <polygon points="10,0 60,0 60,40 50,40 40,40 40,30 30,30 30,20 20,20 20,10 10,10" style={{fill:"#e65c00",stroke:"white",strokeWidth:"5"}}/>
+            <polygon points="10,50 60,50 60,40 40,40 40,30 30,30 30,20 20,20 20,10 10,10" style={{fill:"#e65c00",stroke:"white",strokeWidth:"5"}}>
+            </polygon>
+            <circle cx="30" cy="10" r="5" style={{fill:"white",stroke:"black",strokeWidth:"2"}} />
+            <circle cx="30" cy="10" r="2" style={{fill:"black"}} />
+            <polygon points="45,40 50,30 55,40" style={{fill:"white"}}/>
+          </svg>
           John W Powers
         </Typography>
         <IconButton

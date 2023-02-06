@@ -10,12 +10,13 @@ export default function Skills() {
             
             {(isMobile === false) ? 
                 <>
-                    <Grid item sx={12} md={4}><SkillsList/></Grid>
-                    <Grid item sx={0} md={8}><SkillsBox width="500" height="250" /></Grid>
+                    <Grid item sx={12} md={4}><SkillsList mobile={false} /></Grid>
+                    <Grid item sx={0} md={8}><SkillsBox mobile={false} /></Grid>
                 </>
                 :
                 <>
-                    <Grid item sx={12} md={12}><SkillsList/></Grid>
+                    <Grid item sx={12} md={12}><SkillsBox mobile={true} /></Grid>
+                    <Grid item sx={12} md={12}><SkillsList mobile={true} /></Grid>
                 </>
             }
             

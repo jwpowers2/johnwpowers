@@ -3,6 +3,8 @@ import {Box,Container} from "@mui/material";
 import {useEffect, useState, useRef} from 'react';
 
 export default function SkillsBox(props) {
+    let [height, setHeight] = useState("30em");
+    let [width, setWidth] = useState("50em");
     const svgRef = useRef(null);
     const data = { 
         nodes:[
@@ -139,6 +141,12 @@ export default function SkillsBox(props) {
             {source: 20, target: 10},
         ]
     }
+    function handleMobile() {
+        if (props.mobile === true){
+            setHeight("20em");
+            setWidth("30em");
+        }
+    }
     function linkArc(d) {
         const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
         return `
@@ -150,9 +158,9 @@ export default function SkillsBox(props) {
         const links = data.links.map(d => Object.create(d));
         const nodes = data.nodes.map(d => Object.create(d));
         const types = Array.from(new Set(links.map(d => d.type)))
-        const width = props.width
+        const width = 500
         const color = d3.scaleOrdinal(types, d3.schemeCategory10)
-        const height = props.height
+        const height = 250
         const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id))
         .force("charge", d3.forceManyBody().strength(-400))
@@ -212,6 +220,7 @@ export default function SkillsBox(props) {
     
     }
     useEffect(()=>{
+        handleMobile();
         makeDataViz();
     },[])
 
@@ -220,7 +229,7 @@ export default function SkillsBox(props) {
         <Box
             style={{"width":"100%"}}
         >
-            <svg ref={svgRef} width="50em" height="50em"></svg>
+            <svg ref={svgRef} width={width} height={height}></svg>
         </Box>
         
     )
