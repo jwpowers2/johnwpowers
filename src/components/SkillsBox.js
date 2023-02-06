@@ -150,9 +150,9 @@ export default function SkillsBox(props) {
         const links = data.links.map(d => Object.create(d));
         const nodes = data.nodes.map(d => Object.create(d));
         const types = Array.from(new Set(links.map(d => d.type)))
-        const width = 400
+        const width = props.width
         const color = d3.scaleOrdinal(types, d3.schemeCategory10)
-        const height = 200
+        const height = props.height
         const simulation = d3.forceSimulation(nodes)
         .force("link", d3.forceLink(links).id(d => d.id))
         .force("charge", d3.forceManyBody().strength(-400))
@@ -186,8 +186,8 @@ export default function SkillsBox(props) {
           //.attr("marker-end", d => `url(${new URL(`#arrow-${d.type}`, location)})`);
           const node = svg.append("g")
           .attr("fill", "currentColor")
-          .attr("stroke-linecap", "round")
-          .attr("stroke-linejoin", "round")
+          .attr("stroke-linecap", "square")
+          .attr("stroke-linejoin", "square")
       .selectAll("g")
       .data(nodes)
       .join("g");
