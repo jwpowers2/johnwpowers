@@ -60,7 +60,7 @@ export default function Navbar(props) {
             paddingTop: ".5em",
             color: "black",
             textDecoration: "none",
-            fontFamily: "'Rajdhani', sans-serif"
+            
           }}
         >
           <svg id="svg" height="70" width="70">
@@ -71,7 +71,7 @@ export default function Navbar(props) {
             <circle cx="30" cy="10" r="2" style={{fill:"black"}} />
             <polygon points="45,40 50,30 55,40" style={{fill:"white"}}/>
           </svg>
-          John W Powers
+          <Typography variant="h4" sx={{paddingTop: ".25em",fontWeight: 700,fontFamily: "'Rajdhani', sans-serif"}}>John W Powers</Typography>
         </Typography>
         <IconButton
           edge="start"
