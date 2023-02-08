@@ -39,6 +39,7 @@ export default function Navbar(props) {
 
   return (
     <AppBar
+      className="NavBarTop"
       position="absolute"
       sx={{
         zIndex: theme => theme.zIndex.drawer + 10,
