@@ -1,29 +1,25 @@
-import {Box, Typography, Stack, Divider} from "@mui/material";
+import { Box, Typography, Stack, Divider } from "@mui/material";
 
 export default function Objective() {
-    return (
-        <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-    >
-        <Stack direction="column">
+  return (
+    <Box display="flex" justifyContent="center" alignItems="center">
+      <Stack direction="column">
         <Typography variant="h5" m="1em">
-            Create effective and innovative new things
+          Create effective and innovative new features
         </Typography>
-        <Divider/>
+        <Divider />
         <Typography m="1em" variant="h5">
-            Optimize old things
+          Optimize legacy code
         </Typography>
-        <Divider/>
+        <Divider />
         <Typography m="1em" variant="h5">
-            Contribute to the team
+          Contribute to a team
         </Typography>
-        <Divider/>
+        <Divider />
         <Typography m="1em" variant="h5">
-            Maintain a creative and unorthodox mindset 
+          Maintain a creative mindset
         </Typography>
-        </Stack>
-        </Box>
-    )
+      </Stack>
+    </Box>
+  );
 }
