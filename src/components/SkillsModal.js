@@ -12,6 +12,7 @@ import Dialog from "@mui/material/Dialog";
 import PersonIcon from "@mui/icons-material/Person";
 import AddIcon from "@mui/icons-material/Add";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 import { blue } from "@mui/material/colors";
 
 const emails = ["username@gmail.com", "user02@gmail.com"];
@@ -30,6 +31,7 @@ export default function SkillsModal(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       <DialogTitle>{selectedValue.name}</DialogTitle>
+      <Divider />
       <List sx={{ pt: 0, pl: "2em", pr: "2em" }}>
         <ListItem disableGutters>
           <ListItemText primary={selectedValue.text} />
