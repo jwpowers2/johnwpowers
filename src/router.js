@@ -1,10 +1,4 @@
-import {
-  createBrowserRouter,
-  createBrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Home from "./views/Home";
 import Experience from "./views/Experience";
 import Objective from "./views/Objective";
@@ -38,6 +32,10 @@ const router = createBrowserRouter([
         element: <Education />
       }
     ]
+  },
+  {
+    path: "/*",
+    element: <Home />
   }
 ]);
 export { router };
