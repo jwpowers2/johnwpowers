@@ -108,6 +108,13 @@ export default function SkillsList(props) {
         text:
           "I created and maintained a botnet Postgres database in Amazon RDS.  I used Postgres in various proof of concepts at Flexgen with the Sequelize ORM."
       }
+    ],
+    [
+      {
+        name: "Remix",
+        text:
+          "I designed and implemented most of a 3D image catalog program using Remix and Azure Blob Storage."
+      }
     ]
   ];
   const handleButtonClick = value => {
@@ -135,24 +142,27 @@ export default function SkillsList(props) {
         {skills.map((skill, index) => {
           return (
             <>
-              <Grid item sx={6} md={5}>
-                <Button
-                  style={{
-                    marginBottom: "1em",
-                    border: "2px solid #d6d6d6",
-                    padding: ".5em",
-                    color: "black",
-                    width: "11em",
-                    backgroundColor:"white"
-                  }}
-                  onClick={() => handleButtonClick(skills[index][0])}
-                >
-                  <Typography variant={variant}>
-                    <em>{skill[0].name}</em>
-                  </Typography>
-                </Button>
-              </Grid>
-
+              {skill[0] &&
+                <Grid item sx={6} md={5}>
+                  <Button
+                    style={{
+                      marginBottom: "1em",
+                      border: "2px solid #d6d6d6",
+                      padding: ".5em",
+                      color: "black",
+                      width: "11em",
+                      backgroundColor:"white"
+                    }}
+                    onClick={() => handleButtonClick(skills[index][0])}
+                  >
+                    <Typography variant={variant}>
+                      <em>{skill[0].name}</em>
+                    </Typography>
+                  </Button>
+                </Grid>
+              }
+              {skill[1] &&
+              <>
               <Grid item sx={2} md={2}></Grid>
               <Grid item sx={6} md={5}>
                 <Button
@@ -171,8 +181,10 @@ export default function SkillsList(props) {
                   </Typography>
                 </Button>
               </Grid>
-
+              
               <br />
+              </>
+                }
             </>
           );
         })}

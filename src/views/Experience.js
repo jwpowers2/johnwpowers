@@ -9,9 +9,24 @@ export default function Experience() {
         <ExperienceBox experience={
           [
             {
+              title:"Trenchant Analytics", 
+              description: "Full Stack Developer", 
+              timeline: "September 2023 – June 2024", 
+              body:[
+                "Python and Docker work to deploy Llama AI GPU in Kubernetes cluster",  
+                "Docker work to deploy Next.js and Turbo repositories", 
+                "deploy local Ory authentication server on ubuntu", 
+                "design and implement majority of 3D Image catalog, Remix UI and Azure Blob Storage",
+                "Migrate openai gpt 3.5 chatbot to azure openai gpt 4, python", 
+                "conduct container security scanning and fixes, assess CVE's", 
+                "migrate disparate components and theme into a new UI landing page",
+                "architect and design systems"
+              ]
+            },
+            {
               title:"Flexgen Power Systems", 
               description: "Software Developer II", 
-              timeline: "September 2021 – Present", 
+              timeline: "September 2021 – August 2023", 
               body:[
                 "New Feature Development, design planning",  
                 "Unit testing (FE, BE)", 

@@ -3,7 +3,7 @@ import {Box,Container, Card} from "@mui/material";
 import {useEffect, useState, useRef} from 'react';
 
 export default function SkillsBox(props) {
-    let [height, setHeight] = useState("30em");
+    let [height, setHeight] = useState("40em");
     let [width, setWidth] = useState("50em");
     const svgRef = useRef(null);
     const data = { 
@@ -114,6 +114,16 @@ export default function SkillsBox(props) {
                 "type": "skill",
                 "name": "Postgres"
             },
+            {
+                "id":21,
+                "type":"job",
+                "name":"Trenchant Analytics"
+            },
+            {
+                "id":22,
+                "type":"skill",
+                "name":"Remix"
+            }
         ],
         links: [
             {source: 0, target: 1},
@@ -139,6 +149,13 @@ export default function SkillsBox(props) {
             {source: 17, target: 1},
             {source: 20, target: 1},
             {source: 20, target: 10},
+            {source: 21, target: 11},
+            {source: 21, target: 6},
+            {source: 21, target: 4},
+            {source: 21, target: 2},
+            {source: 21, target: 0},
+            {source: 21, target: 1},
+            {source: 21, target: 22},
         ]
     }
     function handleMobile() {
