@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Grid, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button, Card } from "@mui/material";
 import SkillsModal from "./SkillsModal";
 
 const emails = ["username@gmail.com", "user02@gmail.com"];
@@ -130,6 +130,7 @@ export default function SkillsList(props) {
         open={open}
         onClose={handleClose}
       />
+      <Card sx={{padding: "0em",backgroundColor:"transparent"}}>
       <Grid container>
         {skills.map((skill, index) => {
           return (
@@ -139,9 +140,10 @@ export default function SkillsList(props) {
                   style={{
                     marginBottom: "1em",
                     border: "2px solid #d6d6d6",
-                    padding: "1.2em",
+                    padding: ".5em",
                     color: "black",
-                    width: "12em"
+                    width: "11em",
+                    backgroundColor:"white"
                   }}
                   onClick={() => handleButtonClick(skills[index][0])}
                 >
@@ -157,9 +159,10 @@ export default function SkillsList(props) {
                   style={{
                     marginBottom: "1em",
                     border: "2px solid #d6d6d6",
-                    padding: "1.2em",
+                    padding: ".5em",
                     color: "black",
-                    width: "12em"
+                    width: "11em",
+                    backgroundColor:"white"
                   }}
                   onClick={() => handleButtonClick(skills[index][1])}
                 >
@@ -174,6 +177,7 @@ export default function SkillsList(props) {
           );
         })}
       </Grid>
+      </Card>
     </>
   );
 }

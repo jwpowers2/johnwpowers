@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import {Box,Container} from "@mui/material";
+import {Box,Container, Card} from "@mui/material";
 import {useEffect, useState, useRef} from 'react';
 
 export default function SkillsBox(props) {
@@ -225,12 +225,12 @@ export default function SkillsBox(props) {
     },[])
 
     return (
-    
-        <Box
-            style={{"width":"100%"}}
-        >
-            <svg ref={svgRef} width={width} height={height}></svg>
-        </Box>
-        
+        <Card sx={{margin: ".5em"}}>
+            <Box
+                style={{"width":"20em"}}
+            >
+                <svg ref={svgRef} width={width} height={height}></svg>
+            </Box>
+        </Card>
     )
 }

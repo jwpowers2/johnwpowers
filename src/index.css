@@ -11,6 +11,12 @@ code {
     monospace;
 }
 
+.card-text {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Rajdhani',
+    sans-serif;
+}
+
 .headlineBox {
   height: "1em"
 }
@@ -32,4 +38,43 @@ code {
 }
 .inactive {
   color:"red"
+}
+
+.App-header-svg {
+ 
+    --s: 150px; /* control the size*/
+    --c1: #e75d1d;
+    --c2: #ffcc80;
+    
+    --_g: 
+       var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+       var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+       #0000 96%;
+    background:
+      radial-gradient(50% 50% at 100% 0,var(--_g)),
+      radial-gradient(50% 50% at 0 100%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+      var(--c1);
+    background-size: var(--s) var(--s);
+  
+}
+
+.card-background {
+    --s: 150px; /* control the size*/
+    --c1: #f3f0ec;
+    --c2: #dadae1;
+    
+    --_g: 
+       var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+       var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+       #0000 96%;
+    background:
+      radial-gradient(50% 50% at 100% 0,var(--_g)),
+      radial-gradient(50% 50% at 0 100%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)),
+      radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+      var(--c1);
+    background-size: var(--s) var(--s);
+    border:8px solid #e75d1d;
 }

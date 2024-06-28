@@ -5,7 +5,7 @@ import SkillsList from "../components/SkillsList";
 
 export default function Skills() {
     return (
-        <Grid container
+        <Grid container className="card-background"
         >
             
             {(isMobile === false) ? 
@@ -15,7 +15,7 @@ export default function Skills() {
                 </>
                 :
                 <>
-                    <Grid item sx={12} md={12}><SkillsBox mobile={true} /></Grid>
+                    
                     <Grid item sx={12} md={12}><SkillsList mobile={true} /></Grid>
                 </>
             }

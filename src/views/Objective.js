@@ -1,24 +1,29 @@
-import { Box, Typography, Stack, Divider } from "@mui/material";
+import { Box, Typography, Stack, Divider, Card } from "@mui/material";
 
 export default function Objective() {
   return (
-    <Box display="flex" justifyContent="center" alignItems="center">
+    <Box className="card-background" display="flex" justifyContent="center" alignItems="center" sx={{height: "50rem"}}>
       <Stack direction="column">
-        <Typography variant="h5" m="1em">
+        <Card sx={{padding: "1em", marginBottom: "2em"}}>
+        <Typography variant="h5" m="1em" fontWeight={700}>
           Create effective and innovative new features
         </Typography>
-        <Divider />
-        <Typography m="1em" variant="h5">
+        </Card>
+        <Card sx={{padding: "1em", marginBottom: "2em"}}>
+        <Typography m="1em" variant="h5" fontWeight={700}>
           Optimize legacy code
         </Typography>
-        <Divider />
-        <Typography m="1em" variant="h5">
+        </Card >
+        <Card sx={{padding: "1em", marginBottom: "2em"}}>
+        <Typography m="1em" variant="h5" fontWeight={700}>
           Contribute to a team
         </Typography>
-        <Divider />
-        <Typography m="1em" variant="h5">
+        </Card>
+        <Card sx={{padding: "1em", marginBottom: "2em"}}>
+        <Typography m="1em" variant="h5" fontWeight={700}>
           Maintain a creative mindset
         </Typography>
+        </Card>
       </Stack>
     </Box>
   );

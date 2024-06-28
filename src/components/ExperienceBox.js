@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import {Container,Button,Box,Stack, Typography, Table, TableRow, TableCell} from "@mui/material";
+import {Container,Button,Box,Stack, Typography, Card, Table, TableRow, TableCell} from "@mui/material";
 
 export default function ExperienceBox(props) {
     let [experience, setExperience] = useState(props.experience);
@@ -15,7 +15,8 @@ export default function ExperienceBox(props) {
         setCount(newCount);
     }
     return (
-        <Container>
+        <Container  className="card-background" sx={{minHeight: "50em"}}>
+            <Card  sx={{marginTop: "2em",padding: "1em"}}>
         <Box
             display="flex"
             justifyContent="center"
@@ -71,6 +72,7 @@ export default function ExperienceBox(props) {
                 })}
             </Typography>
         </Box>
+        </Card>
       </Container>
     )
 }

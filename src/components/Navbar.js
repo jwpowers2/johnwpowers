@@ -39,7 +39,7 @@ export default function Navbar(props) {
 
   return (
     <AppBar
-      className="NavBarTop"
+      className="App-header-svg"
       position="absolute"
       sx={{
         zIndex: theme => theme.zIndex.drawer + 10,
@@ -48,7 +48,7 @@ export default function Navbar(props) {
         boxShadow: "none"
       }}
     >
-      <Toolbar sx={{ borderBottom: "4px solid #e65c00" }}>
+      <Toolbar sx={{ borderBottom: "4px solid white" }}>
       
         <Typography
           variant="h5"
@@ -61,9 +61,11 @@ export default function Navbar(props) {
             paddingTop: ".5em",
             color: "black",
             textDecoration: "none",
+           
             
           }}
         >
+          <Stack direction="row" sx={{backgroundColor: "rgba(166, 166, 166, .9)", border:"4px solid #e75d1d", paddingTop: ".5em", paddingRight: ".25em", marginBottom: ".25em"}}>
           <svg id="svg" height="70" width="70">
             <polygon points="10,0 60,0 60,40 50,40 40,40 40,30 30,30 30,20 20,20 20,10 10,10" style={{fill:"#e65c00",stroke:"white",strokeWidth:"5"}}/>
             <polygon points="10,50 60,50 60,40 40,40 40,30 30,30 30,20 20,20 20,10 10,10" style={{fill:"#e65c00",stroke:"white",strokeWidth:"5"}}>
@@ -72,7 +74,8 @@ export default function Navbar(props) {
             <circle cx="30" cy="10" r="2" style={{fill:"black"}} />
             <polygon points="45,40 50,30 55,40" style={{fill:"white"}}/>
           </svg>
-          <Typography variant="h4" sx={{paddingTop: ".25em",fontWeight: 700,fontFamily: "'Rajdhani', sans-serif"}}>John W Powers</Typography>
+          <Typography variant="h4" sx={{color: "white", textShadow: "4px 4px black", fontWeight: 900,fontFamily: "'Rajdhani', sans-serif"}}>John W Powers</Typography>
+          </Stack>
         </Typography>
         <IconButton
           edge="start"

@@ -13,7 +13,8 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [age, setAge] = useState('');
-  let [borderVal, setBorderVal] = useState("4px solid #e65c00")
+  //let [borderVal, setBorderVal] = useState("4px solid #e65c00")
+  let [borderVal, setBorderVal] = useState("4px solid white")
   const navigate = useNavigate();
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -26,20 +27,20 @@ export default function Home() {
     <>
     <Navbar/>
     <Container>
-        <Box sx={{ mt: "6em", pl: "2em", pr: "2em", borderRight: `${borderVal}`, borderLeft: `${borderVal}`}}>  
-        <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            mb="1em"
-        >
-          <Stack direction="row">
-              <Box sx={{p:"1em"}}><NavLink  style={{color:"black", textDecoration: "none"}} to="/objective">Objective</NavLink></Box>
-              <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/experience">Experience</NavLink></Box>
-              <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/skills">Skills</NavLink></Box>
-              <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/education">Education</NavLink></Box>
-          </Stack>
-      </Box>
+        <Box sx={{ mt: "6em", pl: "2em", pr: "2em", borderRight: `${borderVal}`, borderLeft: `${borderVal}`, backgroundColor:"white"}} >  
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                mb="1em"
+            >
+              <Stack direction="row">
+                  <Box sx={{p:"1em"}}><NavLink  style={{color:"black", textDecoration: "none"}} to="/objective">Objective</NavLink></Box>
+                  <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/experience">Experience</NavLink></Box>
+                  <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/skills">Skills</NavLink></Box>
+                  <Box sx={{p:"1em"}}><NavLink style={{color:"black", textDecoration: "none"}} to="/education">Education</NavLink></Box>
+              </Stack>
+            </Box>
             <Outlet/>
         </Box>
     </Container>
