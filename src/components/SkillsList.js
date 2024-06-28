@@ -38,7 +38,7 @@ export default function SkillsList(props) {
       {
         name: "Docker",
         text:
-          "I have worked with Docker for development at The Select Group and at Flexgen."
+          "I worked with Docker for development at The Select Group and at Flexgen.  At Trenchant Analytics, I wrote Dockerfiles for production deployments."
       },
       {
         name: "Docker Compose",
@@ -81,7 +81,8 @@ export default function SkillsList(props) {
         name: "Python",
         text:
           "I built a scraping botnet in python at Forsta.io, \
-      admin tools at AggData, and am helping design and refactor a python tool at Flexgen."
+      admin tools at AggData, and am helping design and refactor a python tool at Flexgen. \
+      At Trenchant Analytics, I refactored two python AI chat apps."
       }
     ],
     [
@@ -114,6 +115,10 @@ export default function SkillsList(props) {
         name: "Remix",
         text:
           "I designed and implemented most of a 3D image catalog program using Remix and Azure Blob Storage."
+      },
+      {
+        name: "Tailwind CSS",
+        text: "I created custom features and components for a Remix app at Trenchant Analytics."
       }
     ]
   ];

@@ -10,7 +10,7 @@ export default function MobileSkillsList(props) {
   const [selectedValue, setSelectedValue] = useState([]);
 
   const skills = [
-    [
+    
       {
         name: "React.js",
         text:
@@ -22,9 +22,7 @@ export default function MobileSkillsList(props) {
         text:
           "I worked heavily with regular expressions \
       as a developer at Forsta and as a web scraper at AggData"
-      }
-    ],
-    [
+      },
       {
         name: "bug fix",
         text:
@@ -33,21 +31,17 @@ export default function MobileSkillsList(props) {
       {
         name: "Material UI",
         text: "I worked with a Material UI code base at Flexgen."
-      }
-    ],
-    [
+      },
       {
         name: "Docker",
         text:
-          "I have worked with Docker for development at The Select Group and at Flexgen."
+           "I worked with Docker for development at The Select Group and at Flexgen.  At Trenchant Analytics, I wrote Dockerfiles for production deployments."
       },
       {
         name: "Docker Compose",
         text:
           "I worked with Docker Compose at Flexgen and Kubernetes at The Select Group."
-      }
-    ],
-    [
+      },
       {
         name: "Security",
         text:
@@ -57,9 +51,7 @@ export default function MobileSkillsList(props) {
         name: "Vue.js",
         text:
           "I made a Vue.js dashboard for contract work at Cisco Systems (The Select Group contracting)."
-      }
-    ],
-    [
+      },
       {
         name: "Node.js",
         text:
@@ -70,9 +62,7 @@ export default function MobileSkillsList(props) {
         text:
           "I implemented logging features in production code \
       and implemented a Nest.js backend for a Proof of Concept which I demo'd to a large audience."
-      }
-    ],
-    [
+      },
       {
         name: "Agile",
         text:
@@ -83,9 +73,7 @@ export default function MobileSkillsList(props) {
         text:
           "I built a scraping botnet in python at Forsta.io, \
       admin tools at AggData, and am helping design and refactor a python tool at Flexgen."
-      }
-    ],
-    [
+      },
       {
         name: "R & D",
         text:
@@ -96,9 +84,7 @@ export default function MobileSkillsList(props) {
         name: "PWA",
         text:
           "I built a Progressive Web App for a Proof of Concept at Flexgen and demo'd it for a large audience."
-      }
-    ],
-    [
+      },
       {
         name: "MongoDB",
         text:
@@ -108,15 +94,17 @@ export default function MobileSkillsList(props) {
         name: "Postgres",
         text:
           "I created and maintained a botnet Postgres database in Amazon RDS.  I used Postgres in various proof of concepts at Flexgen with the Sequelize ORM."
-      }
-    ],
-    [
+      },
       {
         name: "Remix",
         text:
           "I designed and implemented most of a 3D image catalog program using Remix and Azure Blob Storage."
+      },
+      {
+        name: "Tailwind CSS",
+        text: "I created custom features and components for a Remix app at Trenchant Analytics."
       }
-    ]
+    
   ];
   const handleButtonClick = value => {
     setSelectedValue(value);
@@ -144,7 +132,7 @@ export default function MobileSkillsList(props) {
       {skills.map((skill, index) => {
         return (
           <>
-              <Grid item sx={6} md={5}>
+              <Grid item md={5} sx={{margin: "0 auto", padding: ".5em"}}>
                 <Button
                   style={{
                     marginBottom: "1em",
@@ -154,10 +142,10 @@ export default function MobileSkillsList(props) {
                     width: "11em",
                     backgroundColor:"white"
                   }}
-                  onClick={() => handleButtonClick(skills[index][0])}
+                  onClick={() => handleButtonClick(skills[index])}
                 >
                   <Typography variant={variant}>
-                    <em>{skill[0].name}</em>
+                    <em>{skill.name}</em>
                   </Typography>
                 </Button>
               </Grid>

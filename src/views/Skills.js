@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 //import { isMobile } from "react-device-detect";
 import SkillsBox from "../components/SkillsBox";
 import SkillsList from "../components/SkillsList";
-import MobileSkillsList from "../components/MobileSkillsList";
+import MobileSkillsList from "../components/MobileSkillsList.js";
 
 export default function Skills() {
     let [isMobile, setIsMobile] = useState(false);

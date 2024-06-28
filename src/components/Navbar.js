@@ -6,7 +6,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
@@ -79,17 +79,19 @@ export default function Navbar(props) {
         </Typography>
         <IconButton
           edge="start"
-          color="black"
           aria-label="open drawer"
+        
+         color="red"
           onClick={toggleDrawer(true)}
           sx={{
             display: {
               xs: "block",
-              color: "black"
-            }
+              color: "black",
+            },
+            fontWeight: "700"
           }}
         >
-          <MenuIcon />
+          <MenuOutlinedIcon  fontSize="large" color="black" sx={{backgroundColor: "rgba(166, 166, 166, .9)"}}/>
         </IconButton>
         <Drawer
           anchor="right"

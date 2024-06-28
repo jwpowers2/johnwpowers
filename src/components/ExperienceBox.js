@@ -62,15 +62,19 @@ export default function ExperienceBox(props) {
             alignItems="center"
             mt={3}
         >
+            <ul>
             <Typography variant="h5">
                 {experience[count].body.map((item) => {
                     return (
+                        <li>
                         <Typography mb="1em" variant="h6">
                             {item}
                         </Typography>
+                        </li>
                     )
                 })}
             </Typography>
+            </ul>
         </Box>
         </Card>
       </Container>
