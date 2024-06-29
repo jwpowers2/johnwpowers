@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -21,7 +21,15 @@ import '@fontsource/roboto/700.css';
 export default function Navbar(props) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  let [isMobile, setIsMobile] = useState(false);
+  let [titleVariant, setTitleVariant] = useState("h4")
 
+  useEffect(()=>{
+    if (window.innerWidth < 400) {
+      setTitleVariant("h5")
+    };
+    
+  },[])
   const toggleDrawer = open => event => {
     if (
       event.type === "keydown" &&
@@ -74,7 +82,7 @@ export default function Navbar(props) {
             <circle cx="30" cy="10" r="2" style={{fill:"black"}} />
             <polygon points="45,40 50,30 55,40" style={{fill:"white"}}/>
           </svg>
-          <Typography variant="h4" sx={{color: "white", textShadow: "4px 4px black", fontWeight: 900,fontFamily: "'Rajdhani', sans-serif"}}>John W Powers</Typography>
+          <Typography variant={titleVariant} sx={{color: "white", textShadow: "4px 4px black", fontWeight: 900,fontFamily: "'Rajdhani', sans-serif"}}>John W Powers</Typography>
           </Stack>
         </Typography>
         <IconButton
